@@ -8,9 +8,9 @@ public class TestUnit
 	public String _executableFile;
 	public TestCase []_testCases;
 	
-	private ArrayList _runTest(ArrayList input)
+	private ArrayList<String> _runTest(ArrayList<?> input)
 	{
-		ArrayList result = new  ArrayList();
+		ArrayList<String> result = new  ArrayList<String>();
 		
 		StringBuffer strBuffer= new StringBuffer();
         String line= null;

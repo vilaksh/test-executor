@@ -50,7 +50,7 @@ public class XmlUtils
 	
 	public static TestUnit ParseXml(String fileName)
 	{
-		ArrayList result = new ArrayList();
+		ArrayList<TestCase> result = new ArrayList<TestCase>();
 		
 		TestCase []ret = null;
 		String inputfile = null;
@@ -63,8 +63,8 @@ public class XmlUtils
 			Element element;
 			
 			String testId;
-			ArrayList input;
-			ArrayList output;
+			ArrayList<String> input;
+			ArrayList<String> output;
 			
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			DocumentBuilder db = dbf.newDocumentBuilder();
@@ -93,8 +93,8 @@ public class XmlUtils
 								
 				testId = _getNodeValue(idList.item(0));
 				
-				input = new ArrayList();
-				output = new ArrayList();
+				input = new ArrayList<String>();
+				output = new ArrayList<String>();
 				
 				for(int j=0;j<inputList.getLength(); j++)
 					input.add(_getNodeValue(inputList.item(j)));
