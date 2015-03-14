@@ -1,0 +1,1 @@
+The executor takes data about the process to test and the expected i/p and o/p details from a xml and executed the set of test cases on the process
